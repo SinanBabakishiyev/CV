@@ -141,4 +141,13 @@ section#section3 {
 }
 section#section3 img {
   width: 450px;
+}
+
+.imgsec2div {
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  scroll-padding: 10px;
+}
+.imgsec2div::-webkit-scrollbar {
+  width: 0;
 }/*# sourceMappingURL=main.css.map */

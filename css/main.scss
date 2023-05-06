@@ -155,3 +155,12 @@ section#section3{
         width: 450px;
     }
 }
+.imgsec2div{
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    scroll-padding: 10px;
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+}
