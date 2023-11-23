@@ -9,17 +9,29 @@
 body{
     min-height: 100vh;
     background-color: lightgray;
+    height: 300vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 aside{
+    height: 100%;
+} 
+
+.aside{
     background-color:  #002245;
     width: 350px;
     height: 100vh;
-    position: fixed; 
+    position: sticky; 
     top: 0;
     display: flex;
     flex-direction: column;
     z-index: 2;
+    
+    &.active .info{
+        top: 0px;
+    }
+    
     .image{
         padding: 30px 0 0 30px;
         img{
@@ -35,19 +47,21 @@ aside{
         transition: 0.3s;
         cursor: pointer;
     }
-
+    
     .info{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        transition: .3s;
+
         .text{
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-top: 30px;
-                ul{
+            ul{
                     line-height: 50px;
                     li{
                         list-style: none;
@@ -112,60 +126,13 @@ aside .bar i:hover{
     color: #95999d;
     transform: scale(1.2);
 }
-@media screen and (max-width: 1000px){
-    aside{   
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: space-between;
-        padding: 30px;
-        flex-direction: row;
-        align-items: center;
-    }
-    aside .image{
-        width: 80px;
-        height: 80px;
-        padding: 0;
-    }
-    aside .image img{
-        width: 80px;
-        border:  none;
-    }
-    aside .bar i{
-        display: block;
-    }
-    aside .info{
-        display: none;
-    }
-}
-@media screen and (max-height:550px){
-    aside{   
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: space-between;
-        padding: 30px;
-        flex-direction: row;
-        align-items: center;
-    }
-    aside .image{
-        width: 80px;
-        height: 80px;
-        padding: 0;
-    }
-    aside .image img{
-        width: 80px;
-        border:  none;
-    }
-    aside .bar i{
-        display: block;
-    }
-    aside .info{
-        display: none;
-    }
-}
 
-main .home{
+
+main{
+    flex: auto;
+} 
+
+.home{
     background-image: url(https://www.worldatlas.com/upload/9e/9d/8a/chamonix-mont-blanc-resort-alps-france-iren-key.jpg);
     width: 100%;
     height: 90vh;
@@ -186,6 +153,55 @@ main .home{
             letter-spacing: 4px;
             font-family: 'Nunito', sans-serif;
             font-size: 25px;
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 5em;
+    padding: 100px ;
+}
+
+
+@media screen and (max-width: 1000px) , (max-height: 500px){
+    aside{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+    }
+    
+    .aside{   
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        flex-direction: row;
+        align-items: center;
+
+        .image{
+            width: 80px;
+            height: 80px;
+            padding: 0;
+        }
+
+        .image img{
+            width: 80px;
+            border:  none;
+        }
+
+        .bar i{
+            display: block;
+        }
+
+        .info{
+            position: fixed;
+            top: 100%;
+            
         }
     }
 }

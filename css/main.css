@@ -10,80 +10,91 @@
 body {
   min-height: 100vh;
   background-color: lightgray;
+  height: 300vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 aside {
+  height: 100%;
+}
+
+.aside {
   background-color: #002245;
   width: 350px;
   height: 100vh;
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
   z-index: 2;
 }
-aside .image {
+.aside.active .info {
+  top: 0px;
+}
+.aside .image {
   padding: 30px 0 0 30px;
 }
-aside .image img {
+.aside .image img {
   border-radius: 50%;
   width: 150px;
   border: 8px solid rgba(255, 255, 255, 0.032);
 }
-aside .bar i {
+.aside .bar i {
   display: none;
   font-size: 50px;
   color: white;
   transition: 0.3s;
   cursor: pointer;
 }
-aside .info {
+.aside .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  transition: 0.3s;
 }
-aside .info .text {
+.aside .info .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
 }
-aside .info .text ul {
+.aside .info .text ul {
   line-height: 50px;
 }
-aside .info .text ul li {
+.aside .info .text ul li {
   list-style: none;
   background-color: rgba(255, 255, 255, 0.016);
   width: 17em;
   height: 2px;
 }
-aside .info .text ul a {
+.aside .info .text ul a {
   text-decoration: none;
 }
-aside .info .text ul a h2 {
+.aside .info .text ul a h2 {
   transition: 0.5s;
   font-size: 18px;
   color: white;
   font-family: "Nunito", sans-serif;
 }
-aside .info .logo {
+.aside .info .logo {
   padding: 15px 0;
 }
-aside .info .logo ul {
+.aside .info .logo ul {
   gap: 10px;
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
 }
-aside .info .logo ul li {
+.aside .info .logo ul li {
   list-style: none;
 }
-aside .info .logo ul li a {
+.aside .info .logo ul li a {
   text-decoration: none;
 }
-aside .info .logo ul li a i {
+.aside .info .logo ul li a i {
   transition: 0.3s;
   font-size: 18px;
   color: white;
@@ -111,59 +122,11 @@ aside .bar i:hover {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 1000px) {
-  aside {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    flex-direction: row;
-    align-items: center;
-  }
-  aside .image {
-    width: 80px;
-    height: 80px;
-    padding: 0;
-  }
-  aside .image img {
-    width: 80px;
-    border: none;
-  }
-  aside .bar i {
-    display: block;
-  }
-  aside .info {
-    display: none;
-  }
+main {
+  flex: auto;
 }
-@media screen and (max-height: 550px) {
-  aside {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    flex-direction: row;
-    align-items: center;
-  }
-  aside .image {
-    width: 80px;
-    height: 80px;
-    padding: 0;
-  }
-  aside .image img {
-    width: 80px;
-    border: none;
-  }
-  aside .bar i {
-    display: block;
-  }
-  aside .info {
-    display: none;
-  }
-}
-main .home {
+
+.home {
   background-image: url(https://www.worldatlas.com/upload/9e/9d/8a/chamonix-mont-blanc-resort-alps-france-iren-key.jpg);
   width: 100%;
   height: 90vh;
@@ -172,18 +135,60 @@ main .home {
   justify-content: center;
   align-items: center;
 }
-main .home .text {
+.home .text {
   text-align: center;
   line-height: 1.6;
 }
-main .home .text h1 {
+.home .text h1 {
   color: white;
   font-family: "Inter", sans-serif;
   font-size: 32px;
 }
-main .home .text h2 {
+.home .text h2 {
   color: rgb(134, 5, 5);
   letter-spacing: 4px;
   font-family: "Nunito", sans-serif;
   font-size: 25px;
+}
+
+footer {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 5em;
+  padding: 100px;
+}
+
+@media screen and (max-width: 1000px), (max-height: 500px) {
+  aside {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+  }
+  .aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .aside .image {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+  }
+  .aside .image img {
+    width: 80px;
+    border: none;
+  }
+  .aside .bar i {
+    display: block;
+  }
+  .aside .info {
+    position: fixed;
+    top: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
