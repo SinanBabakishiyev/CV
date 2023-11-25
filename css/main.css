@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,315 +5,123 @@
 }
 
 body {
+  background: #DDE6ED;
   min-height: 100vh;
-  background-color: rgb(78, 78, 78);
-  display: flex;
-  flex-wrap: wrap;
+  font-family: "K2D", sans-serif;
 }
 
-aside {
+.side-panel {
+  width: 35%;
   height: 100%;
 }
-
-.aside {
-  background-color: #002245;
-  width: 350px;
+.side-panel aside {
   height: 100vh;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
+  min-height: 400px;
+  padding: 20px 0;
 }
-.aside.active .info {
-  top: 0px;
+.side-panel aside .aside-content {
+  background: rgba(140, 140, 140, 0.062745098);
+  height: 100%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.062745098);
 }
-.aside .image {
-  padding: 30px 0 0 30px;
+.side-panel .info {
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1882352941);
 }
-.aside .image img {
+.side-panel .info .image {
+  width: 100px;
+  height: 100px;
+  background: rgba(128, 128, 128, 0.1882352941);
   border-radius: 50%;
-  width: 150px;
-  border: 8px solid rgba(255, 255, 255, 0.032);
 }
-.aside .bar i {
-  display: none;
-  font-size: 50px;
-  color: white;
+.side-panel .info .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.side-panel .headers {
+  background: rgba(255, 255, 255, 0.062745098);
+  -webkit-user-select: none;
+}
+.side-panel .headers ul {
+  list-style: none;
+  font-size: 1.3em;
+  overflow-y: auto;
+  transition: 0.3s;
+  scroll-snap-type: y proximity;
+}
+.side-panel .headers ul::-webkit-scrollbar {
+  height: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.side-panel .headers ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.0196078431);
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.side-panel .headers ul:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.0823529412);
+  border-radius: 4px;
+}
+.side-panel .headers ul li {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 15px 30px;
+}
+.side-panel .headers ul li[active=true] {
+  background: rgba(0, 0, 0, 0.0666666667);
+}
+.side-panel .headers ul li:hover {
+  background: rgba(0, 0, 0, 0.0235294118);
+}
+.side-panel .social-media {
+  background: rgba(255, 255, 255, 0.062745098);
+  padding: 15px 20px;
+}
+.side-panel .social-media ul {
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.8em;
+  list-style: none;
+}
+.side-panel .social-media ul a {
+  color: black;
+}
+.side-panel .social-media ul:hover svg {
+  color: #808080;
+}
+.side-panel .social-media ul svg {
   transition: 0.3s;
   cursor: pointer;
 }
-.aside .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  transition: 0.3s;
-}
-.aside .info .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 30px;
-}
-.aside .info .text ul {
-  line-height: 50px;
-}
-.aside .info .text ul li {
-  list-style: none;
-  background-color: rgba(255, 255, 255, 0.016);
-  width: 17em;
-  height: 2px;
-}
-.aside .info .text ul a {
-  text-decoration: none;
-}
-.aside .info .text ul a h2 {
-  transition: 0.5s;
-  font-size: 18px;
-  color: white;
-  font-family: "Nunito", sans-serif;
-}
-.aside .info .logo {
-  padding: 15px 0;
-}
-.aside .info .logo ul {
-  gap: 10px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5px;
-}
-.aside .info .logo ul li {
-  list-style: none;
-}
-.aside .info .logo ul li a {
-  text-decoration: none;
-}
-.aside .info .logo ul li a i {
-  transition: 0.3s;
-  font-size: 18px;
-  color: white;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-aside .text ul a h2:hover {
-  color: #95999d;
-  font-weight: 600;
-  font-stretch: 20px;
-  text-indent: 15px;
-}
-
-aside .info .logo ul li a i:hover {
-  color: #95999d;
-  transform: scale(1.5);
-}
-
-aside .bar i:hover {
-  color: #95999d;
+.side-panel .social-media ul svg:hover {
+  color: black;
   transform: scale(1.2);
 }
-
-main {
-  flex: auto;
+.side-panel .headers-content {
+  flex: 1 0 0;
+  overflow-x: auto;
 }
-
-.home {
-  background-image: url(https://www.worldatlas.com/upload/9e/9d/8a/chamonix-mont-blanc-resort-alps-france-iren-key.jpg);
+.side-panel .headers-content .header-main {
+  padding: 20px 35px;
+}
+.side-panel .headers-content .header-main table {
   width: 100%;
-  height: 90vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-spacing: 0 10px;
 }
-.home .text {
-  text-align: center;
-  line-height: 1.6;
+.side-panel .headers-content .header-main table th {
+  text-align: start;
 }
-.home .text h1 {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
+.side-panel .headers-content .header-main table td {
+  text-align: end;
 }
-.home .text h2 {
-  color: rgb(134, 5, 5);
-  letter-spacing: 4px;
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-}
-
-.bio {
-  background-color: lightgray;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 20% 100px 20%;
-  gap: 40px;
-}
-.bio .text h2 {
-  font-size: 28px;
-  letter-spacing: 2px;
-  font-family: "Nunito", sans-serif;
-  padding-bottom: 20px;
-}
-.bio .text h2 span {
-  position: relative;
-}
-.bio .text h2 span::before {
-  content: "";
-  position: absolute;
-  background: #002245;
-  height: 2px;
-  width: 70px;
-  top: calc(100% + 2px);
-  left: 0;
-}
-.bio .text p {
-  font-size: 22px;
-  font-family: "Nunito", sans-serif;
-}
-.bio .bars {
-  gap: 70px;
-  display: grid;
-  justify-content: space-between;
-  width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-.bio .bars .yazilim h2 {
-  font-size: 22px;
-  font-family: "Nunito", sans-serif;
-  padding-bottom: 20px;
-}
-.bio .bars .yazilim h2 span {
-  position: relative;
-}
-.bio .bars .yazilim h2 span::before {
-  content: "";
-  position: absolute;
-  background: #002245;
-  height: 2px;
-  width: 50px;
-  top: calc(100% + 2px);
-  left: 0;
-}
-.bio .bars .yazilim ul .text {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-.bio .bars .yazilim ul .text p {
-  font-size: 18px;
-  font-family: "Nunito", sans-serif;
-}
-.bio .bars .yazilim ul li {
-  list-style: none;
-  width: 100%;
-  height: 5px;
-}
-.bio .bars .yazilim ul li:nth-child(2) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .yazilim ul li:nth-child(4) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .yazilim ul li:nth-child(6) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 10%, rgb(190, 190, 190) 10%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .yazilim ul li:nth-child(8) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 30%, rgb(190, 190, 190) 30%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .dil h2 {
-  font-size: 22px;
-  font-family: "Nunito", sans-serif;
-  padding-bottom: 20px;
-}
-.bio .bars .dil h2 span {
-  position: relative;
-}
-.bio .bars .dil h2 span::before {
-  content: "";
-  position: absolute;
-  background: #002245;
-  height: 2px;
-  width: 50px;
-  top: calc(100% + 2px);
-  left: 0;
-}
-.bio .bars .dil ul .text {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-.bio .bars .dil ul .text p {
-  font-size: 18px;
-  font-family: "Nunito", sans-serif;
-}
-.bio .bars .dil ul li {
-  list-style: none;
-  width: 100%;
-  height: 5px;
-}
-.bio .bars .dil ul li:nth-child(2) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 65%, rgb(190, 190, 190) 65%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .dil ul li:nth-child(4) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 100%, rgb(190, 190, 190) 100%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .dil ul li:nth-child(6) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
-}
-.bio .bars .dil ul li:nth-child(8) {
-  background: linear-gradient(90deg, rgb(184, 16, 16) 50%, rgb(190, 190, 190) 50%, rgb(190, 190, 190) 100%);
-}
-
-footer {
-  width: 100%;
-  display: grid;
-  place-items: center;
-  font-size: 5em;
-  padding: 100px;
-}
-
-@media screen and (max-width: 1000px), (max-height: 500px) {
-  aside {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    z-index: 10;
-  }
-  .aside {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    flex-direction: row;
-    align-items: center;
-  }
-  .aside .image {
-    width: 80px;
-    height: 80px;
-    padding: 0;
-  }
-  .aside .image img {
-    width: 80px;
-    border: none;
-  }
-  .aside .bar i {
-    display: block;
-  }
-  .aside .info {
-    position: fixed;
-    top: 100%;
-  }
-  .aside .info .logo ul li a i {
-    display: none;
-  }
+.side-panel .headers-content .header-main hr {
+  margin: 20px 0;
+  border: 1px solid rgba(128, 128, 128, 0.231372549);
 }/*# sourceMappingURL=main.css.map */

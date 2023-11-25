@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100&display=swap');
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title{font-family: 'Akshar', sans-serif;}
+
+.flex{
+    display: flex;
+
+    &.d-col{flex-direction: column;}
+    &.wrap{flex-wrap: wrap;}
+    &.ai-center{align-items: center;}
+    &.jc-center{justify-items: center;}
+    &.pi-center{align-items: center;justify-items: center;}
+}
+
+.grid{
+    &.pi-center{place-items: center;}
+}
