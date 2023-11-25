@@ -2,88 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links -->
-        <link rel="stylesheet" href="lib/OwlCarousel 2.3.4/dist/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/fontawesome.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/assets.css">
-
-        <!-- Scripts -->
-        <script src="lib/OwlCarousel 2.3.4/dist/owl.carousel.min.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/fontawesome.min.js"></script>
-        <script src="js/main.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="side-panel">
-                <aside>
-                    <div class="aside-content flex d-col">
-                        <div class="info flex d-col pi-center">
-                            <div class="image grid pi-center">
-                                <img loading="lazy" src="https://th.bing.com/th/id/R.34aed1317552099a339a0b0addb6621f?rik=vi7KueUGBWKqBQ&pid=ImgRaw&r=0" alt=".">
-                            </div>
-                            <span style="margin-top: 10px;">
-                                <h1 class="text-capitalize title" style="font-size: 2em;">Rick Astley</h1>
-                                <h2 class="text-uppercase"  style="font-size: 1.2em;color: gray;">a rick-roller</h2>
-                            </span>
-                        </div>
-                        <div class="headers">
-                            <ul class="flex">
-                                <li active="true">Main</li>
-                                <li>Languages</li>
-                                <li>Skills</li>
-                                <li>Coding</li>
-                            </ul>
-                        </div>
-                        <div class="headers-content">
-                            <div class="headers-list">
-                                <div class="header-main">
-                                    <table>
-                                        <tr>
-                                            <th class="title">Country:</th>
-                                            <td>Georgia</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="title">City:</th>
-                                            <td>Marneuli</td>
-                                        </tr>
-                                        <!-- More with php -->
-                                    </table>
-                                    <hr>
-                                </div>
-                                <div class="header-lang"></div>
-                                <div class="header-skills"></div>
-                                <div class="header-code"></div>
-                            </div>
-                        </div>
-                        <div class="social-media">
-                            <ul class="flex">
-                                <li><a href="#" title="Youtube"><i class="fa-brands fa-youtube"></i></a></li>
-                                <li><a href="#" title="Github"><i class="fa-brands fa-github"></i></a></li>
-                                <li><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                                <li><a href="#" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
-                            </ul>
-                        </div>
+    <div class="content-body">
+        <aside>
+            <div class="aside">
+                <div class="image">
+                    <img src="img/IMG-20230302-WA0018.jpg" alt="Sinan SinanBabakishiyev">
+                </div>
+                <div class="bar" onclick="document.querySelector('.aside').classList.toggle('active')"><i class="fa-solid fa-bars"></i></div>
+                <div class="info">
+                    <div class="text">
+                        <ul>
+                            <a href=""><h2>Home</h2></a>
+                            <li></li>
+                            <a href=""><h2>About</h2></a>
+                            <li></li>
+                            <a href=""><h2>Services</h2></a>
+                            <li></li>
+                            <a href=""><h2>Portfolio</h2></a>
+                            <li></li>
+                            <a href=""><h2>Contact</h2></a>
+                            <li></li>
+                        </ul>
+                    </div>        
+                    <div class="logo">
+                        <ul>
+                            <li><a href="https://www.instagram.com/sinan_babakishiew/"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCY1MyXeBzygm-Do-Lrc7U3g"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://github.com/SinanBabakishiyev"><i class="fa-brands fa-github"></i></a></i></li>
+                            <li><a href="https://sadasdada"><i class="fa-brands fa-twitch"></i></a></i></li>
+                            <li><a href="https://frgsdafaadw"><i class="fa-brands fa-x-twitter"></i></a></i></li>
+                        </ul>
                     </div>
-                </aside>
+                </div>
             </div>
-            <div class="content">
-
-            </div>
-        </div>
+        </aside>
+    
+        <main>
+            <section class="home">
+                <div class="text">            
+                    <h1>SİNAN BABAKİSHİYEV</h1>
+                    <h2>DEVELOPER</h2>
+                </div>
+            </section>
+            <section class="bio">
+                <div class="text">            
+                    <h2><span>BİOGRAFİA</span></h2>
+                    <p>I am Sinan Babakishiyev, a 16 year old developer living in Georgia. I generally deal with UI/UX Design, Web Site development and Pixel Art. I give importance to simplicity and modernity in my work as much as possible. I try to create work that suits people's tastes.</p>
+                </div>
+                <div class="bars">
+                    <div class="yazilim">
+                        <h2><span>Pro. Languages</span></h2>
+                        <ul>
+                            <div class="text"><p>Html</p><p>80%</p></div>
+                            <li></li>
+                            <div class="text"><p>Css</p><p>70%</p></div>
+                            <li></li>
+                            <div class="text"><p>Js</p><p>10%</p></div>
+                            <li></li>
+                            <div class="text"><p>Python</p><p>30%</p></div>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="dil">
+                        <h2><span>Languages</span></h2>
+                        <ul>
+                            <div class="text"><p>English</p><p>65%</p></div>
+                            <li></li>
+                            <div class="text"><p>Turkish</p><p>100%</p></div>
+                            <li></li>
+                            <div class="text"><p>Georgian</p><p>80%</p></div>
+                            <li></li>
+                            <div class="text"><p>Rassian</p><p>50%</p></div>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
-
-
-
-
-
-    
+    <footer>
+        text
+    </footer>
 </body>
 </html>
