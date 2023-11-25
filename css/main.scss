@@ -8,8 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 body{
     min-height: 100vh;
-    background-color: lightgray;
-    height: 300vh;
+    background-color: rgb(78, 78, 78);
     display: flex;
     flex-wrap: wrap;
 }
@@ -109,9 +108,6 @@ aside{
         }
     }
 
-// aside .image img:hover{
-
-// }
 aside .text ul a h2:hover{
     color: #95999d;
     font-weight: 600;
@@ -153,6 +149,143 @@ main{
             letter-spacing: 4px;
             font-family: 'Nunito', sans-serif;
             font-size: 25px;
+        }
+    }
+}
+.bio{
+    background-color: lightgray;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20% 100px 20%;
+    gap: 40px;
+    .text{
+        h2{
+            font-size: 28px;
+            letter-spacing: 2px;
+            font-family: 'Nunito', sans-serif;
+            padding-bottom: 20px;
+            span{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: #002245;
+                    height: 2px;
+                    width: 70px;
+                    top: calc(100% + 2px);
+                    left: 0;
+                }
+            }
+        }
+        p{
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+        }
+    }
+    .bars{
+        gap: 70px;
+        display: grid;
+        justify-content: space-between;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        
+        .yazilim{
+            h2{
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+            padding-bottom: 20px;
+            span{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: #002245;
+                    height: 2px;
+                    width: 50px;
+                    top: calc(100% + 2px);
+                    left: 0;
+                }
+            }
+        }
+        ul{
+            .text{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                p{
+                    font-size: 18px;
+                    font-family: 'Nunito', sans-serif;
+                }
+            }
+
+            li{
+                list-style: none;
+                width: 100%;
+                height: 5px;
+            }
+            li:nth-child(2){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(4){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(6){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 10%, rgb(190, 190, 190) 10%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(8){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 30%, rgb(190, 190, 190) 30%, rgb(190, 190, 190) 100%);
+            }
+        }
+    }
+        .dil{
+            h2{
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+            padding-bottom: 20px;
+            span{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: #002245;
+                    height: 2px;
+                    width: 50px;
+                    top: calc(100% + 2px);
+                    left: 0;
+                }
+            }
+        }
+        ul{
+            .text{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                p{
+                    font-size: 18px;
+                    font-family: 'Nunito', sans-serif;
+                }
+            }
+            li{
+                list-style: none;
+                width: 100%;
+                height: 5px;
+            }
+            li:nth-child(2){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 65%, rgb(190, 190, 190) 65%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(4){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 100%, rgb(190, 190, 190) 100%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(6){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
+            }
+            li:nth-child(8){
+                background: linear-gradient(90deg, rgb(184, 16, 16) 50%, rgb(190, 190, 190) 50%, rgb(190, 190, 190) 100%);
+            }
+        }
         }
     }
 }
@@ -201,7 +334,9 @@ footer{
         .info{
             position: fixed;
             top: 100%;
-            
+            .logo ul li a i{
+                display: none;
+            }
         }
     }
 }
