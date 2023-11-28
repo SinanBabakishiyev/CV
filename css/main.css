@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
 }
@@ -17,6 +21,7 @@ body {
 
 aside {
   height: 100%;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -127,7 +132,6 @@ main {
 }
 
 #home {
-  background-image: url(https://www.worldatlas.com/upload/9e/9d/8a/chamonix-mont-blanc-resort-alps-france-iren-key.jpg);
   width: 100%;
   height: 90vh;
   position: relative;
@@ -135,20 +139,28 @@ main {
   justify-content: center;
   align-items: center;
 }
+#home img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  position: fixed;
+  z-index: -21313;
+}
 #home .text {
   text-align: center;
   line-height: 1.6;
+  position: absolute;
 }
 #home .text h1 {
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 32px;
+  font-size: 2em;
 }
 #home .text h2 {
   color: rgb(134, 5, 5);
   letter-spacing: 4px;
   font-family: "Nunito", sans-serif;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 #bio {
@@ -162,8 +174,8 @@ main {
   gap: 40px;
 }
 #bio .text h2 {
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 1.4em;
+  letter-spacing: 1.5px;
   font-family: "Nunito", sans-serif;
   padding-bottom: 20px;
 }
@@ -180,7 +192,7 @@ main {
   left: 0;
 }
 #bio .text p {
-  font-size: 22px;
+  font-size: 1.2em;
   font-family: "Nunito", sans-serif;
 }
 #bio .bars {
@@ -189,8 +201,11 @@ main {
   justify-content: space-between;
   width: 100%;
 }
+#bio .bars .yazilim {
+  width: 100%;
+}
 #bio .bars .yazilim h2 {
-  font-size: 22px;
+  font-size: 1.3em;
   font-family: "Nunito", sans-serif;
   padding-bottom: 20px;
 }
@@ -212,12 +227,12 @@ main {
   padding-top: 20px;
 }
 #bio .bars .yazilim ul .text p {
-  font-size: 18px;
+  font-size: 1.1em;
   font-family: "Nunito", sans-serif;
 }
 #bio .bars .yazilim ul li {
   list-style: none;
-  width: 250px;
+  width: 100%;
   height: 5px;
 }
 #bio .bars .yazilim ul li:nth-child(2) {
@@ -232,8 +247,11 @@ main {
 #bio .bars .yazilim ul li:nth-child(8) {
   background: linear-gradient(90deg, rgb(184, 16, 16) 30%, rgb(190, 190, 190) 30%, rgb(190, 190, 190) 100%);
 }
+#bio .bars .program {
+  width: 100%;
+}
 #bio .bars .program h2 {
-  font-size: 22px;
+  font-size: 1.3em;
   font-family: "Nunito", sans-serif;
   padding-bottom: 20px;
 }
@@ -256,12 +274,12 @@ main {
   padding-top: 20px;
 }
 #bio .bars .program ul .text p {
-  font-size: 18px;
+  font-size: 1.1em;
   font-family: "Nunito", sans-serif;
 }
 #bio .bars .program ul li {
   list-style: none;
-  width: 250px;
+  width: 100%;
   height: 5px;
 }
 #bio .bars .program ul li:nth-child(2) {
@@ -286,8 +304,8 @@ main {
   flex-direction: column;
 }
 #skill h2 {
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 1.4em;
+  letter-spacing: 1.5px;
   font-family: "Nunito", sans-serif;
   padding-bottom: 20px;
 }
@@ -314,7 +332,13 @@ main {
   flex: 40%;
   min-width: 250px;
   height: 300px;
-  background-color: #6e6e6f;
+  background-color: #818181;
+  transition: 0.4s;
+}
+
+#skill .boxs .cart:hover {
+  background-color: #585858;
+  transform: scale(1.05);
 }
 
 footer {
@@ -390,14 +414,11 @@ footer h3 {
   .aside .info h2 {
     text-align: center;
   }
-  .aside .info .text ul li {
-    width: 30em;
-  }
   .aside .info .logo ul li a i {
     display: none;
   }
 }
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1370px) {
   main #bio .bars {
     display: flex;
     justify-content: center;
