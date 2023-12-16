@@ -6,6 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+$primary: #004e9c;
+
 html{
     scroll-behavior: smooth;
 }
@@ -145,9 +148,10 @@ main{
             color: white;
             font-family: 'Inter', sans-serif;
             font-size: 30px;
+            
         }
         h2{
-            color: rgb(134, 5, 5);
+            color:$primary;
             letter-spacing: 4px;
             font-family: 'Nunito', sans-serif;
             font-size: 22px;
@@ -162,13 +166,13 @@ main{
     flex-direction: column;
     align-items: center;
     padding: 100px 20% 100px 20%;
-    gap: 50px;
+    gap: 1.5rem;
     .text{
         h2{
             font-size: 1.2em;
             letter-spacing: 2px;
             font-family: 'Nunito', sans-serif;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             span{
                 position: relative;
                 &::before{
@@ -197,7 +201,7 @@ main{
             h2{
             font-size: 1.2em;
             font-family: 'Nunito', sans-serif;
-            padding-bottom: 20px;
+            margin-bottom: .5rem;
             span{
                 position: relative;
                 &::before{
@@ -228,16 +232,16 @@ main{
                 height: 5px;
             }
             li:nth-child(2){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 80%, rgb(190, 190, 190) 80%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(4){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(6){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 10%, rgb(190, 190, 190) 10%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 10%, rgb(190, 190, 190) 10%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(8){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 30%, rgb(190, 190, 190) 30%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 30%, rgb(190, 190, 190) 30%, rgb(190, 190, 190) 100%);
             }
         }
     }
@@ -246,7 +250,7 @@ main{
             h2{
             font-size: 1.2em;
             font-family: 'Nunito', sans-serif;
-            padding-bottom: 20px;
+            margin-bottom: .5rem;
             span{
                 position: relative;
                 &::before{
@@ -277,16 +281,16 @@ main{
                 height: 5px;
             }
             li:nth-child(2){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 65%, rgb(190, 190, 190) 65%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 65%, rgb(190, 190, 190) 65%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(4){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 70%, rgb(190, 190, 190) 70%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(6){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 60%, rgb(190, 190, 190) 60%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 60%, rgb(190, 190, 190) 60%, rgb(190, 190, 190) 100%);
             }
             li:nth-child(8){
-                background: linear-gradient(90deg, rgb(184, 16, 16) 95%, rgb(190, 190, 190) 95%, rgb(190, 190, 190) 100%);
+                background: linear-gradient(90deg, $primary 95%, rgb(190, 190, 190) 95%, rgb(190, 190, 190) 100%);
             }
         }
         }
@@ -304,7 +308,7 @@ main{
         font-size: 22px;
         letter-spacing: 2px;
         font-family: 'Nunito', sans-serif;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         span{
             position: relative;
             &::before{
@@ -323,7 +327,7 @@ main{
         justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
-        gap: 50px;
+        gap:  1.7rem;
         .cart{
             transition: 0.3s;
             flex: 40%;
@@ -353,7 +357,7 @@ main{
             &::before{
                 content: '';
                 position: absolute;
-                background: #002245;
+                background:#002245;
                 height: 2px;
                 width: 70px;
                 top: calc(100% + 2px);
@@ -385,13 +389,13 @@ main{
         }
         input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label{
             top: -1.5rem;
-            color: darkred;
-            font-size: 0.8rem;
+            color: $primary;
+            font-size: 13px;
         }
         input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label{
             top: -1.5rem;
-            color: darkred;
-            font-size: 0.8rem;
+            color: $primary;
+            font-size: 13px;
         }
         input[type="submit"]{
             background-color: #002245;
