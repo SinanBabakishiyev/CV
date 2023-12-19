@@ -9,123 +9,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="content-body">
-        <aside>
-            <div class="aside">
-                <div class="image">
-                    <img src="img/IMG-20230302-WA0018.jpg" alt="Sinan SinanBabakishiyev">
-                </div>
-                <div class="bar" onclick="document.querySelector('.aside').classList.toggle('active')"><i class="fa-solid fa-bars"></i></div>
-                <div class="info">
-                    <div class="text">
-                        <ul>
-                            <a href="#home"><h2>Ana Səyfə</h2></a>
-                            <li></li>
-                            <a href="#bio"><h2>Haqqında</h2></a>
-                            <li></li>
-                            <a href="#nailiyyetler"><h2>Nailiyyətlərim</h2></a>
-                            <li></li>
-                            <a href="#iletisim"><h2>Əlaqə</h2></a>
-                            <li></li>
-                        </ul>
-                    </div>        
-                    <div class="logo">
-                        <ul>
-                            <li><a href="https://www.instagram.com/sinan_babakishiew/"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCY1MyXeBzygm-Do-Lrc7U3g"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="https://github.com/SinanBabakishiyev"><i class="fa-brands fa-github"></i></a></i></li>
-                            <li><a href="https://www.facebook.com/profile.php?id=100069901277763"><i class="fa-brands fa-facebook"></i></a></i></li>
-                        </ul>
-                    </div>
+
+    <aside>
+        <div class="aside">
+            <div class="image">
+                <img src="img/IMG-20230302-WA0018.jpg" alt="Sinan SinanBabakishiyev">
+                <h2>Sinan Babakishiev</h2>
+            </div>
+            <div class="bar" onclick="document.querySelector('.aside').classList.toggle('active')"><i class="fa-solid fa-bars"></i></div>
+            <div class="info">
+                <div class="text">
+                    <ul>
+                        <a href="#main"><h2>Ana Səyfə</h2></a>
+                        <li></li>
+                        <a href="#bio"><h2>Haqqında</h2></a>
+                        <li></li>
+                        <a href="#nailiyyet"><h2>Nailiyyətlərim</h2></a>
+                        <li></li>
+                        <a href="#iletisim"><h2>Əlaqə</h2></a>
+                        <li></li>
+                    </ul>
+                </div>        
+                <div class="logo">
+                    <ul>
+                        <li><a href="https://www.instagram.com/sinan_babakishiew/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCY1MyXeBzygm-Do-Lrc7U3g"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://github.com/SinanBabakishiyev"><i class="fa-brands fa-github"></i></a></i></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100069901277763"><i class="fa-brands fa-facebook"></i></a></i></li>
+                    </ul>
                 </div>
             </div>
-        </aside>
-    
-        <main>
-            <section id="home">
-                <div class="text">            
-                    <h1>SİNAN BABAKİSHİYEV</h1>
-                    <h2>PROQRAMÇI</h2>
-                </div>
-            </section>
-            <section id="bio">
-                <div class="text">            
-                    <h2><span>HAQQINDA</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fuga nulla iusto ullam eius eaque magni obcaecati ratione sint. Officiis illum dolorum molestias odit magni eos totam molestiae. Qui, reprehenderit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi rerum non voluptate. Minima dolore libero ab, fuga tempore delectus ut, distinctio corrupti eos ad animi eligendi recusandae quidem cumque qui?</p>
-                </div>
-                <div class="bars">
-                    <div class="yazilim">
-                        <h2><span>Kodlaşdırma</span></h2>
-                        <ul>
-                            <div class="text"><p>Html</p><p>80%</p></div>
-                            <li></li>
-                            <div class="text"><p>Css</p><p>70%</p></div>
-                            <li></li>
-                            <div class="text"><p>Js</p><p>10%</p></div>
-                            <li></li>
-                            <div class="text"><p>Python</p><p>30%</p></div>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="program">
-                        <h2><span>Proqramlar</span></h2>
-                        <ul>
-                            <div class="text"><p>Visual Studio</p><p>65%</p></div>
-                            <li></li>
-                            <div class="text"><p>Atom</p><p>70%</p></div>
-                            <li></li>
-                            <div class="text"><p>Aseprite</p><p>60%</p></div>
-                            <li></li>
-                            <div class="text"><p>Piskel</p><p>95%</p></div>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section id="nailiyyetler">
-                <div class="text"><h2><span>NAILIYYƏTLƏRİM</span></h2></div>
-                <div class="boxs">
-                    <div class="cart"></div>
-                    <div class="cart"></div>
-                    <div class="cart"></div>
-                    <div class="cart"></div>
-                </div>
-            </section>
-            <section id="iletisim">
-                <div class="text"><h2><span>ƏLAQƏ</span></h2></div>
-                <form action="#">
-                    <div class="formcontrol">
-                        <input type="text" required />
-                        <label for="#">Adınız</label>
-                    </div>
-                    <div class="formcontrol">
-                        <input type="email" required />
-                        <label for="#">Email</label>
-                    </div>
-                    <div class="formcontrol">
-                        <input type="text" required />
-                        <label for="#">Mövzu</label>
-                    </div>
-                    <div class="formcontrol">
-                        <textarea cols="30" rows="5" required></textarea>
-                        <label for="#">Mətn</label>
-                    </div>
-                    <div class="formcontrol">
-                        <input type="submit" value="GÖNDER!" class="buton" style="    
-                        width: auto;
-                        border-radius: 4px;
-                        box-shadow: 2px 2px 1px #00000050;
-                        padding: 1rem 2rem;">
-                    </div>
-                </form>
-            </section>
-        </main>
-    </div>
+        </div>
+    </aside>
 
-    <footer>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorum non accusantium eaque error? Rem aut laudantium accusantium nesciunt non id. Asperiores accusantium facere sunt sapiente reiciendis ex odio quae.</p>
-        <ul><li></li></ul>
-        <h3>Copyright © 2024 All Rights Reserved </h3>
-    </footer>
+    <main>
+        <section id="main">
+            <div class="container-fluid">
+
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
