@@ -218,7 +218,7 @@ section .important {
 }
 
 #skill {
-  background: rgb(248, 248, 248);
+  background: rgb(242, 242, 242);
 }
 #skill h3 {
   font-size: 22px;
@@ -307,6 +307,112 @@ section .important {
   transform: scale(1.015);
 }
 
+#iletisim {
+  background: rgb(242, 242, 242);
+}
+#iletisim .important {
+  display: flex;
+  flex-direction: column;
+}
+#iletisim h2 {
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2rem;
+}
+#iletisim h2 span {
+  position: relative;
+}
+#iletisim h2 span::before {
+  content: "";
+  position: absolute;
+  background: black;
+  height: 2px;
+  width: 70px;
+  top: calc(100% + 2px);
+  left: 0;
+}
+#iletisim .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8117647059);
+}
+#iletisim .container .contact {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+#iletisim .container .contact form {
+  margin: 35px;
+}
+#iletisim .container .contact form .inputfield {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #777;
+}
+#iletisim .container .contact form .none {
+  margin-top: 0;
+}
+#iletisim .container .contact form .textareafield {
+  height: 150px;
+  padding-top: 10px;
+}
+#iletisim .container .contact form button {
+  border-radius: 20px;
+  color: white;
+  margin-top: 18px;
+  height: 3em;
+  width: 10em;
+  background-color: #002245;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+#iletisim .container .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 2.45em;
+}
+#iletisim .container .info .icon {
+  gap: 2em;
+  display: flex;
+  align-items: center;
+}
+#iletisim .container .info .icon i {
+  font-size: 22px;
+}
+
+button:hover {
+  background-color: #002e5c;
+}
+
+footer {
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.35rem;
+}
+footer h5 {
+  color: white;
+  font-size: 1.2em;
+}
+footer p {
+  color: white;
+  font-size: 0.8em;
+}
+
 @media screen and (max-width: 1000px), (max-height: 500px) {
   aside {
     position: fixed;
@@ -357,5 +463,16 @@ section .important {
   }
   .aside .info .logo ul li a i {
     display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  #iletisim .important .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */

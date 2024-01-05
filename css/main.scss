@@ -232,7 +232,7 @@ section .important{
 }
 
 #skill{
-    background: rgb(248, 248, 248);
+    background: rgb(242, 242, 242);
     h3{
         font-size: 22px;
         letter-spacing: 2px;
@@ -323,6 +323,112 @@ section .important{
 .cart:hover{
     transform: scale(1.015);
 }
+
+#iletisim{
+    background: rgb(242, 242, 242);
+    .important{
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-family: 'Nunito', sans-serif;
+        margin-bottom: 2rem;
+        span{
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                background: black;
+                height: 2px;
+                width: 70px;
+                top: calc(100% + 2px);
+                left: 0;
+            }
+        }
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 0 10px #000000cf;
+        .contact{
+            background: white;
+            width: 100%;
+            height: 100%;
+            form{
+                margin: 35px;
+                .inputfield{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 20px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 15px;
+                    outline: none;
+                    border: 1px solid #777;
+                }
+                .none{
+                    margin-top: 0;
+                }
+                .textareafield{
+                    height: 150px;
+                    padding-top: 10px;
+                }
+                button{
+                    border-radius: 20px;
+                    color: white;
+                    margin-top: 18px;
+                    height: 3em;
+                    width: 10em;
+                    background-color: #002245;
+                    font-size: 12px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .info{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            flex-direction: column;
+            padding-left: 10px;
+            gap: 2.45em;
+            .icon{
+                gap: 2em;
+                display: flex;
+                align-items: center;
+                i{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+button:hover{
+    background-color: #002e5c;
+}
+footer{
+    background-color: rgb(26, 26, 26);
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.35rem;
+    h5{
+        color: white;
+        font-size: 1.2em;
+    }
+    p{
+        color: white;
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (max-width: 1000px) , (max-height: 500px){
     aside{
         position: fixed;
@@ -380,5 +486,16 @@ section .important{
 
     }
 }
+@media screen and (max-width: 900px){
+    #iletisim .important .container{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 
+    }
+}
 
