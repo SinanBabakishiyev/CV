@@ -28,6 +28,7 @@ $primary: #004e9c;
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 body{
     min-height: 100vh;
@@ -189,16 +190,16 @@ section .important{
     }
     .text{
         text-align: center;
-        line-height: 1.6;
+        line-height: 1.4;
         position: absolute;
         h1{
             color: white;
             font-family: 'Inter', sans-serif;
-            font-size: 30px;
+            font-size: 3em;
             text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.674);
         }
         h3{
-            color: $primary;
+            color: rgb(36, 1, 1);
             letter-spacing: 4px;
             font-family: 'Nunito', sans-serif;
             font-size: 22px;
@@ -310,13 +311,26 @@ section .important{
         justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
-        gap: 10px 5px;
+        gap: 15px 10px;
         .cart{
             transition: 0.3s;
             flex: 40%;
             min-width: 250px;
             height: 300px;
+            display: flex;
             background-color: #6e6e6f;
+            a{
+                display: flex;
+                width: 100%;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    transition: .3s;
+                }
+                img:hover{
+                    filter: brightness(65%) blur(2px);
+                }
+            }
         }
     }
 }

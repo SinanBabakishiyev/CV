@@ -21,6 +21,7 @@ hover(1.015) // Cardlarin hoveri
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 body {
@@ -178,17 +179,17 @@ section .important {
 }
 #main .text {
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.4;
   position: absolute;
 }
 #main .text h1 {
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 30px;
+  font-size: 3em;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.674);
 }
 #main .text h3 {
-  color: #004e9c;
+  color: rgb(36, 1, 1);
   letter-spacing: 4px;
   font-family: "Nunito", sans-serif;
   font-size: 22px;
@@ -293,14 +294,28 @@ section .important {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  gap: 10px 5px;
+  gap: 15px 10px;
 }
 #nailiyyet .boxs .cart {
   transition: 0.3s;
   flex: 40%;
   min-width: 250px;
   height: 300px;
+  display: flex;
   background-color: #6e6e6f;
+}
+#nailiyyet .boxs .cart a {
+  display: flex;
+  width: 100%;
+}
+#nailiyyet .boxs .cart a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+#nailiyyet .boxs .cart a img:hover {
+  filter: brightness(65%) blur(2px);
 }
 
 .cart:hover {
