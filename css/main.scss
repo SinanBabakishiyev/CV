@@ -354,7 +354,6 @@ section .important{
         justify-content: center;
         box-shadow: 0 0 10px #000000cf;
         .contact{
-            background: white;
             width: 100%;
             height: 100%;
             form{
@@ -390,19 +389,18 @@ section .important{
             }
         }
         .info{
-            width: 100%;
             height: 100%;
             display: flex;
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin: 40px 40px 40px 0;
             flex-direction: column;
-            padding-left: 10px;
             gap: 2.45em;
             .icon{
                 gap: 2em;
                 display: flex;
                 align-items: center;
                 i{
+                    color: #002345;
+                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
                     font-size: 22px;
                 }
             }
