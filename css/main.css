@@ -303,23 +303,42 @@ section .important {
   height: 300px;
   display: flex;
   background-color: #6e6e6f;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
-#nailiyyet .boxs .cart a {
-  display: flex;
-  width: 100%;
+#nailiyyet .boxs .cart:hover {
+  transform: scale(1.015);
 }
-#nailiyyet .boxs .cart a img {
-  width: 100%;
+#nailiyyet .boxs .cart:hover img {
+  filter: brightness(65%) blur(2px);
+}
+#nailiyyet .boxs .cart:hover a {
+  opacity: 1;
+}
+#nailiyyet .boxs .cart img {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-#nailiyyet .boxs .cart a img:hover {
-  filter: brightness(65%) blur(2px);
+#nailiyyet .boxs .cart a {
+  display: grid;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
 }
-
-.cart:hover {
-  transform: scale(1.015);
+#nailiyyet .boxs .cart a p {
+  color: #909090;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1254901961);
 }
 
 #iletisim {
