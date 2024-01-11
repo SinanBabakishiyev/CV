@@ -50,7 +50,7 @@ aside {
 
 .aside {
   background-color: #002245;
-  width: 350px;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -303,8 +303,6 @@ section .important {
   height: 300px;
   display: flex;
   background-color: #6e6e6f;
-  display: grid;
-  place-items: center;
   position: relative;
 }
 #nailiyyet .boxs .cart:hover {
@@ -328,16 +326,21 @@ section .important {
   z-index: 1;
 }
 #nailiyyet .boxs .cart a {
-  display: grid;
+  display: flex;
   color: black;
   text-decoration: none;
-  text-align: center;
   opacity: 0;
   transition: 0.3s;
   z-index: 2;
 }
+#nailiyyet .boxs .cart a .title {
+  width: 80%;
+}
+#nailiyyet .boxs .cart a h4 {
+  color: rgb(37, 37, 37);
+}
 #nailiyyet .boxs .cart a p {
-  color: #909090;
+  color: white;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1254901961);
 }
 
@@ -448,7 +451,7 @@ footer p {
 @media screen and (max-width: 1000px), (max-height: 500px) {
   aside {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     z-index: 10;
   }
@@ -496,8 +499,6 @@ footer p {
   .aside .info .logo ul li a i {
     display: none;
   }
-}
-@media screen and (max-width: 900px) {
   #iletisim .important .container {
     display: flex;
     flex-direction: column;
