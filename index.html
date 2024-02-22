@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <nav class="flex justify-between items-center w-full h-20 bg-white-300 pl-32 pr-32">
+    <nav class="flex justify-between items-center w-full h-20 pl-32 pr-32 fixed z-50 bg-white">
         <h1 class="text-3xl font-semibold font-sans tracking-wide text-renktext">Babakishiew</h1>
-        <ul class="flex gap-12 text-2m tracking-widest uppercase font-semibold text-renktext">
-            <li><a href=""><h2 class="relative before:content-['e'] before:left-0 before:right-full before:top-full before:h-0.5 before:bg-red-500 before:transition before:absolute hover:before:right-0">Home</h2></a></li>
-            <li><a href=""><h2 class="">Aboute</h2></a></li>
-            <li><a href=""><h2 class="">Service</h2></a></li>
-            <li><a href=""><h2 class="">Work</h2></a></li>
-            <li><a href=""><h2 class="">Contact</h2></a></li>
+
+        <ul class="fixed text-center bg-white lg:bg-transparent lg:relative h-full transition-all top-[-100%] left-0 w-full flex-col lg:!top-0 lg:text-sm lg:w-auto lg:h-auto lg:flex-row py-10 px-20 text-xl flex gap-12 text-2m tracking-widest uppercase font-semibold text-renktext" id="links">
+            <li><a href="" class="relative transition before:duration-[400ms] before:content-[''] before:left-0 before:top-full before:w-0 before:h-0.5 before:bg-renktext before:absolute hover:before:w-full"><h2 class="">Home</h2></a></li>
+            <li><a href="" class="relative transition before:duration-[400ms] before:content-[''] before:left-0 before:top-full before:w-0 before:h-0.5 before:bg-renktext before:absolute hover:before:w-full"><h2 class="">Aboute</h2></a></li>
+            <li><a href="" class="relative transition before:duration-[400ms] before:content-[''] before:left-0 before:top-full before:w-0 before:h-0.5 before:bg-renktext before:absolute hover:before:w-full"><h2 class="">Service</h2></a></li>
+            <li><a href="" class="relative transition before:duration-[400ms] before:content-[''] before:left-0 before:top-full before:w-0 before:h-0.5 before:bg-renktext before:absolute hover:before:w-full"><h2 class="">Work</h2></a></li>
+            <li><a href="" class="relative transition before:duration-[400ms] before:content-[''] before:left-0 before:top-full before:w-0 before:h-0.5 before:bg-renktext before:absolute hover:before:w-full"><h2 class="">Contact</h2></a></li>
         </ul>
-    </nav>
-    <section class="reltive flex justify-center items-center">
-        <img src="img/zyro-image.png" alt="" class="w-full h-[100vh] filter brightness-200">
-        <div class="absolute text-center z-1">
-            <h1 class="text-renktext text-6xl font-semibold leading-normal">Welcome To My CV</h1>
-            <h2 class="text-white text-3xl font-light">Frontend Developer</h2>  
+        <div onclick="document.querySelector('#links').classList.toggle('!top-[75px]')" class="block cursor-pointer lg:hidden">
+            <span class="block rounded-[30px] w-[25px] h-[3px] m-[3px] transition-all duration-500 ease-in-out bg-renktext"></span>
+            <span class="block rounded-[30px] w-[25px] h-[3px] m-[3px] transition-all duration-500 ease-in-out bg-renktext"></span>
+            <span class="block rounded-[30px] w-[25px] h-[3px] m-[3px] transition-all duration-500 ease-in-out bg-renktext" ></span>
         </div>
-    </section>
+    </nav>
+    <main>
+        <section class="reltive flex justify-center items-center">
+            <img src="img/zyro-image.png" alt="" class="w-full h-[100vh] filter brightness-200">
+            <div class="absolute text-center z-1">
+                <h1 class="text-renktext text-6xl font-semibold leading-normal">Welcome To My CV</h1>
+                <h2 class="text-white text-3xl font-light">Frontend Developer</h2>  
+            </div>
+        </section>
+
+        <section class="flex justify-between items-center w-full h-[100vh] bg-slate-300"></section>
+    </main>
 </body>
 </html>
