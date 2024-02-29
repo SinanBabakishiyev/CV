@@ -5,6 +5,11 @@ module.exports = {
     extend: {
       colors: {
         renktext: '#004e9c',
+        
+      },
+
+      fontFamily: {
+        textfont: ["Roboto", 'sans-serif'],
       }
     },
     
